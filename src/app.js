@@ -4,6 +4,7 @@ const express=require('express')
 const hbs=require('hbs')
 const geocode=require('./utils/geocode')
 const  forecast =require('./utils/forecast')
+const port=process.env.PORT||3000
 
 
 const app =express()
@@ -79,6 +80,6 @@ app.get('/weather',(req,res)=>
 app.get('*',(req,res)=>{
     res.render('404')
 })
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log("The server is set up on the server no 3000")
 })
