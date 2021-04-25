@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@300&display=swap" rel="stylesheet">
+ <style>
+        *{
+            font-family: 'Antonio', sans-serif;
+            }
+        img{
+           margin:auto;
+           margin-top: 100px;
+           display:inline;
+           margin-left: 1120px;
+           max-width: 200px;
+        }
+        p{
+            font-size:medium;
+        }
+        h1{
+            text-align: center;
+        }
+        .container{  margin-left: auto;
+        color:rgb(24, 23, 22);
+    margin-right: auto;
+       margin-top: 50px;
+        max-width: 300px;
+        }
+    </style>   
+</head>
+<body>
+    {{>header}}
+    
+    
+    <div  class="container">
+        
+     <p >This is a web based web application to get the weather forecast for the current day by taking address as the 
+         sole input .This  application uses VisualCrossing API to get the forecast for the given coordinates and MapBoxAPI
+         that converts the address from a string to a coordinate having [longitude and latitide] .The backend technologies used
+         are node.js and express,the front end has been designed with HTML ,CSS and Handlebar to render some of the dynamic content Hope you like it.&#128516;
+          </p> 
+
+    </div>
+{{>footer}}
+</body>
+</html>

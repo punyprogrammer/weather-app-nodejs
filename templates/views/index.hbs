@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@300&display=swap" rel="stylesheet">
+
+
+    <style>
+        *{
+            font-family: 'Antonio', sans-serif;
+            }
+        p{
+            font-size:medium;
+        }
+        h1{ 
+            text-align: center;
+        }
+        .container{  margin-left: auto;
+        color:rgb(24, 23, 22);
+    margin-right: auto;
+       margin-top: 50px;
+        max-width: 300px;
+        }
+    </style>
+    
+</head>
+<body>
+     {{>header}}
+    <div  class="container">
+     <p >Use this webapp to get the weather forecast for the day .Enter the address for which you are looking to get the weather forcast for .</p>
+     <form>
+            <input placeholder="Location">
+            <button>Search</button>
+        </form>
+
+        <p id="message-1"></p>
+        <p id ="message-3"></p>
+        <p id="message-2"></p>
+     
+
+    </div>
+    
+{{>footer}}
+<script src="/js/app.js"></script>
+</body>
+</html>

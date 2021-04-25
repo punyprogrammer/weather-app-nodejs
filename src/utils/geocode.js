@@ -1,0 +1,23 @@
+const request=require('request')
+//The following function defines the geocode of the given address 
+const geocode= (address,callback)=>{
+const url="https://api.mapbox.com/geocoding/v5/mapbox.places/"+address+".json?access_token=pk.eyJ1Ijoiam9obm1heWVyMTk5OSIsImEiOiJja25yNjM2aDEwbG10Mm5wZms0azcxbDVtIn0.vZOqKof_slHhP76328Lisw" 
+request({url:url,json:true} ,(error,response)=>{
+    if(error) callback('Unable to connect kindly  check your internet connection',undefined)
+    else if(response.body.features.length===0) callback('The address entered is invalid kindly enter the address in the supported format',undefined)
+    else
+    {
+        callback(undefined,{
+            latitude:response.body.features[0].center[1],
+            longitude:response.body.features[0].center[0],
+            location:response.body.features[0].place_name
+        })
+    }
+})
+}
+// geocode('Madhyamgram',(error,response)=>{
+// if(error) console.log(error)
+// else console.log(response)
+// }
+// )
+module.exports=geocode 
